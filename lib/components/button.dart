@@ -4,7 +4,8 @@ class MyButton extends StatelessWidget {
   final VoidCallback onPress;
   final Color color;
   final String text;
-    const MyButton({super.key , required this.color, required this.text, required this.onPress});
+  final Color textColor ;
+    const MyButton({super.key , required this.color, required this.text, required this.onPress, required this.textColor});
 
   @override
   Widget build(BuildContext context) {
@@ -19,7 +20,7 @@ class MyButton extends StatelessWidget {
             shape: BoxShape.circle,
             color: color,
           ),
-          child: Center(child: Text(text , style: const TextStyle(color: Colors.white,fontSize: 20),)),
+          child: Center(child: Text(text , style: TextStyle(color: textColor,fontSize: 30),)),
         ),
       ),
     );
